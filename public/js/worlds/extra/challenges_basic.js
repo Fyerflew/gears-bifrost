@@ -81,6 +81,7 @@ var challenges_basic = new function() {
         ['Abstraction: Dungeon 9', 'worlds/challenges_basic/abstraction-9.json?v=3b330462'],
         ['Abstraction: Dungeon 10', 'worlds/challenges_basic/abstraction-10.json?v=499c54f1'],
         ['Abstraction: Dungeon 11', 'worlds/challenges_basic/abstraction-11.json?v=4f35d8a5'],
+        ['BIFROST Test 1', 'worlds/challenges_basic/bifrost-TEST-1.json?v=0'],
       ]
     },
     {
@@ -585,7 +586,12 @@ var challenges_basic = new function() {
         '<p>Move your robot into the green box and stop inside.</p>' +
         '<p>No blocks limits, but the green box changes position on reset.</p>'
       );
+    } else if (self.options.jsonFile.includes('bifrost-TEST-1.json')) {
+      $message = $(
+        '<p>Move your robot into the green box and stop inside.</p>'
+      );
     }
+    
 
     acknowledgeDialog({
       title: 'Mission',
@@ -775,6 +781,8 @@ var challenges_basic = new function() {
       self.renderIntersectOne(delta, 'worldBaseObject_box0', 'SECRETS');
     } else if (self.options.jsonFile.includes('conditions-3.json')) {
       self.renderIntersectOne(delta, 'worldBaseObject_box0', 'AZKABAN');
+    } else if (self.options.jsonFile.includes('bifrost-TEST-1.json')) {
+      self.renderIntersectOne(delta, 'worldBaseObject_box0', 'EXIT CODE 01');
     } else if (self.options.jsonFile.includes('conditions-4.json')) {
       self.renderIntersectOne(delta, 'worldBaseObject_box0', 'FIRE');
     } else if (self.options.jsonFile.includes('conditions-5.json')) {
