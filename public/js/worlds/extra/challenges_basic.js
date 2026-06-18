@@ -588,7 +588,7 @@ var challenges_basic = new function() {
       );
     } else if (self.options.jsonFile.includes('bifrost-TEST-1.json')) {
       $message = $(
-        '<p>Move your robot into the green box and stop inside.</p>'
+        '<p>Move your robot into the green box and start inside.</p>'
       );
     }
     
