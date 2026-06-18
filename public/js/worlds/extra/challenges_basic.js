@@ -611,8 +611,9 @@ var challenges_basic = new function() {
     if (elapsedTime < 1000) {
       return;
     }
-
-    if (self.options.jsonFile.includes('basic-1.json')) {
+    if (self.options.jsonFile.includes('TEST-1')) {
+      self.renderIntersectOne(delta, 'worldBaseObject_box0', 'BIFROST');
+    } else if (self.options.jsonFile.includes('basic-1.json')) {
       self.renderIntersectOne(delta, 'worldBaseObject_box0', 'UNICORN');
     } else if (self.options.jsonFile.includes('basic-2.json')) {
       self.renderIntersectOne(delta, 'worldBaseObject_box0', 'ELEPHANT');
